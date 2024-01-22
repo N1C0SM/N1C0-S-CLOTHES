@@ -1,0 +1,374 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+header .logo {
+    max-width: 100%;
+}
+
+.menu nav {
+    max-width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 12px;
+    position: sticky;
+    z-index: 2;
+    top: 0;
+}
+
+.menu nav ul {
+    display: flex;
+    gap: 12px;
+    max-width: 100%;
+}
+
+.menu nav ul .active {
+    border-bottom: #FBD23D 5px solid;
+}
+
+.menu nav ul li.derecha {
+    margin-left: auto;
+}
+
+a {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 12px;
+    color: #FBD23D;
+}
+
+a:hover {
+    color: #fbd23dd0;
+}
+
+.menu a,footer a {
+    text-decoration: none;
+    color: #e8e9e9;
+}
+
+.derecha {
+    text-align: left;
+}
+
+.responsive-visible {
+    padding: 12px;
+    border: 1px solid #000000;
+    border-radius: 4px;
+    display: none;
+}
+
+.responsive-visible input {
+    display: none;
+}
+
+main {
+    min-height: 85vh;
+}
+
+
+.hero {
+    background-size: cover;
+    background-position: 50%;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 24px;
+}
+
+#hero {
+    background-image: url("./IMG/Colas.avif");
+}
+
+#hero-stussy {
+    background-image: url(./IMG/Stussy/cover.avif)
+}
+
+#hero-emme-studios {
+    background-image: url(./IMG/emme-studios/cover.avif);
+}
+
+#hero-stone-island {
+    background-image: url(./IMG/Stone-Island/cover.avif);
+}
+
+#hero-nude-project {
+    background-image: url(./IMG/nude-project/cover.avif);
+}
+
+.hero .contenido {
+    border-radius: 8px;
+    background: #FBD23D;
+    padding: 25px;
+    text-align: center;
+    max-width: 600px;
+    width: 100%;
+    margin: 24px;
+}
+
+.hero .contenido h1 {
+    font-size: 48px;
+    margin-bottom: 32px;
+}
+
+.btn,.btn {
+    display: inline-block;
+    border: 2px solid #000;
+    border-radius: 10px;
+    padding: 15px 30px;
+    background-color: transparent;
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #00000020;
+    cursor: pointer;
+    color: #000;
+}
+
+#novedades {
+    padding: 24px;
+}
+
+.articles {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 48px;
+    margin-top: 24px;
+    object-fit: cover;
+}
+
+.articles article {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: #efefef;
+    width: 100%;
+    max-width: 300px;
+    padding: 24px;
+}
+
+.articles article img {
+    max-width: 252px;
+    max-height: 320.26px;
+    min-width: 200px;
+}
+
+article .front {
+    display: block;
+}
+
+article .back {
+    display: none;
+}
+
+article:hover .front{
+    display: none;
+    cursor: pointer;
+}
+
+article:hover .back {
+    display: block;
+    cursor: pointer;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    min-width: 100%;
+    max-width: 800%;
+    padding: 50px;
+    border-radius: 25px;
+    margin: auto;
+}
+
+h2 {
+    color: black;
+}
+
+label {
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+input, textarea {
+    padding: 12px 14px;
+    border: 1px solid black;
+    margin: 12px 0 20px;
+    border-radius: 10px;
+    color: #000000;
+}
+
+input:focus-visible, textarea:focus-visible {
+    outline: #FBD23D 1px auto;
+}
+
+footer {
+    background-color: #454545;
+    min-height: 200px;
+    bottom: 0;
+
+}
+
+footer .rows .logo img {
+    max-width: 150px;
+}
+
+footer ul {
+    list-style: none;
+
+}
+
+footer h3 {
+    font-size: 24px;
+}
+
+.rows {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.rows div {
+    width: 33%;
+}
+
+.tienda, .social {
+    display: flex;
+    place-items: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.logo {
+    display: flex;
+    place-content: center;
+}
+
+.social ul {
+    display: flex;
+    gap: 10px;
+}
+
+.ph {
+    font-size: 32px;
+    color: white;
+}
+
+/********************************************filtros***************************************/
+
+#sudaderas-sin-capucha:checked~.articles .sudaderas-con-capucha,#sudaderas-sin-capucha:checked~.articles .chaquetas, #sudaderas-sin-capucha:checked~.articles .camisetas, #sudaderas-sin-capucha:checked~.articles .jerseys, #sudaderas-sin-capucha:checked~.articles .pantalones {
+    display: none;
+}
+
+#sudaderas-con-capucha:checked~.articles .sudaderas-sin-capucha, #sudaderas-con-capucha:checked~.articles .chaquetas, #sudaderas-con-capucha:checked~.articles .jerseys, #sudaderas-con-capucha:checked~.articles .camisetas, #sudaderas-con-capucha:checked~.articles .pantalones {
+    display: none;
+}
+#pantalones:checked~.articles .sudaderas-sin-capucha, #pantalones:checked~.articles .chaquetas, #pantalones:checked~.articles .jerseys, #pantalones:checked~.articles .camisetas, #pantalones:checked~.articles .sudaderas-con-capucha {
+    display: none;
+}
+
+#chaquetas:checked~.articles .sudaderas-con-capucha, #chaquetas:checked~.articles .sudaderas-sin-capucha, #chaquetas:checked~.articles .jerseys, #chaquetas:checked~.articles .camisetas, #chaquetas:checked~.articles .pantalones {
+    display: none;
+}
+
+#jerseys:checked~.articles .sudaderas-con-capucha, #jerseys:checked~.articles .sudaderas-sin-capucha, #jerseys:checked~.articles .camisetas,
+#jerseys:checked~.articles .chaquetas, #jerseys:checked~.articles .pantalones{
+    display: none;
+}
+
+#camisetas:checked~.articles .sudaderas-con-capucha, #camisetas:checked~.articles .sudaderas-sin-capucha, #camisetas:checked~.articles .chaquetas,
+#camisetas:checked~.articles .jerseys, #camisetas:checked~.articles .pantalones {
+    display: none;
+}
+
+#pantalones:checked~.articles .sudaderas-sin-capucha, #pantalones:checked~.articles .chaquetas, #pantalones~.articles .sudaderas-con-capucha {
+    display: none;
+}
+
+/********************************************filtros***************************************/
+
+/********************************************media*****************************************/
+
+@media screen and (max-width:914px) {
+
+    #hero {
+        height: 80vh;
+    }
+
+    .logo {
+    max-width: 48px;
+    max-height: 48px;
+    }
+
+    .responsive-hidden {
+        display: none;
+    }
+
+    .responsive-visible {
+        display: block;
+    }
+
+    .menu:has(input:checked) .responsive-hidden {
+        display: block;
+        position: absolute;
+        top: 106px;
+        right: 0;
+        background-color: #000;
+        padding: 12px 32px;
+        padding-right: 12px;
+        width: auto;
+    }
+
+    .menu nav.responsive-hidden ul {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+    }
+
+    .menu nav ul li.derecha {
+        margin-left: unset;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .rows {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tienda {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .social {
+        display: flex;
+        flex-direction: column;
+    }
+}
