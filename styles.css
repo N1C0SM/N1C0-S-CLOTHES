@@ -167,9 +167,9 @@ main {
 }
 
 .articles article img {
-    max-width: 252px;
-    max-height: 320.26px;
-    min-width: 200px;
+    width: 252px;
+    height: 320.26px;
+    object-fit: cover;
 }
 
 article .front {
